@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookVerse - Colorful Reading World</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Mouse Glow -->
+    <div id="mouseGlow"></div>
+
+    <!-- Floating Decorations -->
+    <div class="floating f1">✦</div>
+    <div class="floating f2">✧</div>
+    <div class="floating f3">★</div>
+    <div class="floating f4">✦</div>
+
+
+    <!-- LOGIN -->
+    <section id="loginPage" class="login-page">
+
+        <div class="login-box">
+
+            <div class="logo">📚</div>
+
+            <h1>BookVerse</h1>
+
+            <p class="subtitle">
+                Enter the magical world of books ✨
+            </p>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="👤 Username"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="🔒 Password"
+            >
+
+            <button onclick="login()">
+                Login 🚀
+            </button>
+
+            <p id="loginMessage"></p>
+
+            <div class="demo">
+                <b>Demo Account</b><br><br>
+                Username: <b>student</b><br>
+                Password: <b>12345</b>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN WEBSITE -->
+    <section id="mainPage" class="hidden">
+
+        <header>
+
+            <div class="brand">
+                📚 <span>BookVerse</span>
+            </div>
+
+            <nav>
+                <a href="#home">🏠 Home</a>
+                <a href="#books">📚 Books</a>
+                <a href="#about">💡 About</a>
+
+                <button class="logout" onclick="logout()">
+                    Logout
+                </button>
+            </nav>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <span class="badge">
+                    ✨ WELCOME, READER ✨
+                </span>
+
+                <h2>
+                    Every book is a
+                    <span>new adventure!</span>
+                </h2>
+
+                <p>
+                    Explore mysterious islands, magical gardens,
+                    amazing technology and the secrets of space.
+                    Choose a book and let your imagination fly.
+                </p>
+
+                <a href="#books" class="start-btn">
+                    Start Reading 📖
+                </a>
+
+            </div>
+
+            <div class="hero-books">
+                <span>📕</span>
+                <span>📗</span>
+                <span>📘</span>
+            </div>
+
+        </section>
+
+
+        <!-- BOOKS -->
+        <section id="books" class="books-section">
+
+            <div class="section-title">
+                <span>📚</span>
+
+                <h2>
+                    Choose Your Adventure
+                </h2>
+
+                <span>✨</span>
+            </div>
+
+            <p class="section-description">
+                Pick a book and enter a completely different world.
+            </p>
+
+
+            <div class="book-grid">
+
+
+                <!-- BOOK 1 -->
+                <div class="book-card card-blue">
+
+                    <div class="book-cover">
+                        🌊
+                        <span>📘</span>
+                    </div>
+
+                    <div class="book-info">
+
+                        <h3>
+                            The Blue Adventure
+                        </h3>
+
+                        <div class="stars">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p>
+                            A mysterious map, a hidden island,
+                            an ancient secret and an adventure
+                            nobody expected.
+                        </p>
+
+                        <button onclick="openBook('The Blue Adventure')">
+                            Read Adventure 📖
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 2 -->
+                <div class="book-card card-pink">
+
+                    <div class="book-cover">
+                        🌹
+                        <span>📕</span>
+                    </div>
+
+                    <div class="book-info">
+
+                        <h3>
+                            The Secret Garden
+                        </h3>
+
+                        <div class="stars">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p>
+                            A golden key leads Mia to a magical
+                            garden hiding a beautiful secret.
+                        </p>
+
+                        <button onclick="openBook('The Secret Garden')">
+                            Open Garden 🌹
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 3 -->
+                <div class="book-card card-green">
+
+                    <div class="book-cover">
+                        🤖
+                        <span>📗</span>
+                    </div>
+
+                    <div class="book-info">
+
+                        <h3>
+                            Learning Python
+                        </h3>
+
+                        <div class="stars">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p>
+                            Follow Sam's journey from writing
+                            a first program to building a robot.
+                        </p>
+
+                        <button onclick="openBook('Learning Python')">
+                            Start Learning 💻
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOOK 4 -->
+                <div class="book-card card-purple">
+
+                    <div class="book-cover">
+                        🚀
+                        <span>📙</span>
+                    </div>
+
+                    <div class="book-info">
+
+                        <h3>
+                            World of Science
+                        </h3>
+
+                        <div class="stars">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+
+                        <p>
+                            A strange signal from space may be
+                            the greatest discovery in history.
+                        </p>
+
+                        <button onclick="openBook('World of Science')">
+                            Explore Space 🚀
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUOTE -->
+        <section class="quote-section">
+
+            <div class="quote">
+                <span>“</span>
+
+                A room without books is like
+                a body without a soul.
+
+                <span>”</span>
+            </div>
+
+            <p>
+                — Keep reading, keep dreaming ✨
+            </p>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="about">
+
+            <div class="about-card">
+
+                <div class="about-icon">
+                    🌈
+                </div>
+
+                <h2>
+                    Welcome to BookVerse
+                </h2>
+
+                <p>
+                    BookVerse is a colorful little library created
+                    for people who love stories, imagination and
+                    learning. Every book opens a new door.
+                </p>
+
+                <div class="about-items">
+
+                    <div>
+                        📖
+                        <b>Read</b>
+                    </div>
+
+                    <div>
+                        🌟
+                        <b>Discover</b>
+                    </div>
+
+                    <div>
+                        💡
+                        <b>Learn</b>
+                    </div>
+
+                    <div>
+                        🚀
+                        <b>Imagine</b>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <div>
+                📚 BookVerse
+            </div>
+
+            <p>
+                Made for readers who love to dream ❤️
+            </p>
+
+            <small>
+                © 2026 BookVerse
+            </small>
+
+        </footer>
+
+    </section>
+
+
+    <!-- READER -->
+    <div id="reader" class="reader hidden">
+
+        <div class="reader-box">
+
+            <button class="close" onclick="closeBook()">
+                ✕
+            </button>
+
+            <div class="reader-top">
+                📖✨
+            </div>
+
+            <h2 id="bookTitle"></h2>
+
+            <div class="reading-line"></div>
+
+            <div id="bookContent"></div>
+
+            <div class="end-message">
+                ✨ End of chapter ✨
+                <br>
+                Keep reading and keep dreaming! 📚
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
